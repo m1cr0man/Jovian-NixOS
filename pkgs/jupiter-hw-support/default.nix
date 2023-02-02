@@ -57,6 +57,9 @@ stdenv.mkDerivation {
       For the themes as well as unfree firmware, see the `steamdeck-theme`
       and `steamdeck-firmware` packages.
     '';
+    # Allow override of ucm.conf
+    # Set the overriding package priority something < 100, > 0
+    priority = 100;
     license = licenses.mit;
   };
 }
